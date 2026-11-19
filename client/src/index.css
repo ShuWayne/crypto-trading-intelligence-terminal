@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { min-height: 100%; }
+body {
+  background: #05070d;
+  color: #e6ebf2;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+* { scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.18) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.16); border-radius: 8px; }
+
+.tnum { font-variant-numeric: tabular-nums; }
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+}
+.glass-hover:hover { border-color: rgba(47,123,255,0.45); }
+.aurora {
+  background:
+    radial-gradient(900px 480px at 12% -10%, rgba(47,123,255,0.28), transparent 60%),
+    radial-gradient(800px 420px at 88% 0%, rgba(139,92,246,0.22), transparent 60%),
+    radial-gradient(700px 500px at 55% 110%, rgba(34,211,238,0.12), transparent 60%),
+    #05070d;
+}
+@keyframes tickUp { 0% { background: rgba(34,197,94,0.28); } 100% { background: transparent; } }
+@keyframes tickDown { 0% { background: rgba(239,68,68,0.28); } 100% { background: transparent; } }
+.tick-up { animation: tickUp 0.9s ease-out; }
+.tick-down { animation: tickDown 0.9s ease-out; }
+@keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.live-dot { animation: pulseDot 1.6s ease-in-out infinite; }
+input[type='range'] { accent-color: #2f7bff; }
+select, input[type='number'], input[type='text'] { color-scheme: dark; }
