@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# SQLite databases (created on first run; never commit live data)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logs
+*.log
+logs/
+
+# Environment files — NEVER commit .env (it may hold local overrides).
+# .env.example is the committed template and IS kept.
+.env
+.env.local
+.env.*.local
+
+# Test / coverage output
+coverage/
+.nyc_output/
+
+# OS / editor artefacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
