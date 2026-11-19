@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import type { Candle } from '../../ta/indicators.js';
 
 /** Stored 240-day 4h / 120-day 1h Binance klines from the Phase 1 backtests. */
-export const BINANCE_DATA_DIR = join(process.cwd(), '..', '..', 'binance-system', 'data');
+export const BINANCE_DATA_DIR = join(process.cwd(), 'src', 'engines', '__tests__', 'fixtures');
 
 export function loadCsvCandles(symbol: string, interval: '4h' | '1h'): Candle[] {
   const text = readFileSync(join(BINANCE_DATA_DIR, `${symbol}_${interval}.csv`), 'utf8');
